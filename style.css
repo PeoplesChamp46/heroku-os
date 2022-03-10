@@ -28,12 +28,12 @@ body {
   align-items: center;
   justify-content: center;
 
-  background:
+/*   background:
 linear-gradient(63deg, #999 23%, transparent 23%) 7px 0,
 linear-gradient(63deg, transparent 74%, #999 78%),
 linear-gradient(63deg, transparent 34%, #999 38%, #999 58%, transparent 62%),
 #444;
-background-size: 16px 48px;
+background-size: 16px 48px; */
 
   /* display: none;  */ /* change intro logo*/
 
@@ -73,6 +73,8 @@ background-size: 16px 48px;
 .back-to-top:hover {
   background-color: #ebcd1e;
 }
+
+
 
 .wrapper {
   height: 100vh;
@@ -205,6 +207,25 @@ nav {
   line-height: 2em;
 }
 
+.title {
+  width: 100%;
+  height: 40vh;
+  background-image: url(https://source.unsplash.com/random);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  background-blend-mode: darken;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
 /* hero section */
 
 .hero {
@@ -301,6 +322,8 @@ button > a {
 }
 
 .slide > img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
