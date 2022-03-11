@@ -61,6 +61,13 @@
   border-bottom: #ccc 1px solid;
 }
 
+.content-head > h1{
+  color:#666;
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
 .share {
   width: 35%;
   height: 20%;
