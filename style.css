@@ -13,12 +13,12 @@ body {
   font-size: 12px;
 }
 
-.preloader {
+/* .preloader {
   position: fixed;
   width: 100%;
   height: 100%;
   z-index: 9;
-}
+} */
 
 .loader {
   width: 100%;
@@ -28,7 +28,7 @@ body {
   align-items: center;
   justify-content: center;
 
-/*   background:
+  /*   background:
 linear-gradient(63deg, #999 23%, transparent 23%) 7px 0,
 linear-gradient(63deg, transparent 74%, #999 78%),
 linear-gradient(63deg, transparent 34%, #999 38%, #999 58%, transparent 62%),
@@ -73,8 +73,6 @@ background-size: 16px 48px; */
 .back-to-top:hover {
   background-color: #ebcd1e;
 }
-
-
 
 .wrapper {
   height: 100vh;
@@ -156,7 +154,21 @@ nav {
   font-size: 1em;
 }
 
-.mob-list > li {
+/* inner mobile menu list */
+
+#inner-mob-list {
+  height: 0;
+  opacity: 0;
+  background-color: #222;
+  text-transform: capitalize;
+}
+
+#inner-mob-list > li > a {
+  padding-left: 1em;
+}
+
+.mob-list > li,
+#inner-mob-list > li {
   height: 7vh;
   padding: 1em;
   border-bottom: #666 1px solid;
@@ -166,19 +178,21 @@ nav {
   color: #666;
 }
 
-.mob-list > li > a {
+.mob-list > li > a,
+#inner-mob-list > li > a {
   width: 100%;
-  height: 10%;
   color: #fff;
   font-weight: 300;
 }
 
-.mob-list > li:hover {
+.mob-list > li:hover,
+#inner-mob-list > li:hover {
   background-color: #ebcd1e;
   color: #333;
 }
 
-.mob-list > li:hover > a{
+.mob-list > li:hover > a,
+#inner-mob-list > li:hover > a {
   color: #333;
 }
 
@@ -475,8 +489,7 @@ footer {
 /* tablet */
 
 @media only screen and (min-width: 680px) {
-
-  .mob-nav{
+  .mob-nav {
     width: 30%;
   }
 
@@ -493,12 +506,10 @@ footer {
   }
 
   .foot-links > li {
-
     border-right: #666 solid 1px;
   }
 
-  .foot-links > li:last-child{
-
+  .foot-links > li:last-child {
     border-right: none;
   }
 }

@@ -8,6 +8,23 @@ function closemenu() {
   document.querySelector(".mob-nav").style.transform = "translateX(100%)";
 }
 
+function expandMenu() {
+  const valuen = "-";
+  const valuep = "+";
+  let content =
+    document.querySelector("#inner-mob-list"); /* .style.display = "block" */
+
+  if (content.style.height) {
+    content.style.height = null;
+    content.style.opacity = 0;
+    document.querySelector("span").innerHTML = valuep;
+  } else {
+    content.style.height = "100%";
+    content.style.opacity = 1;
+    document.querySelector("span").innerHTML = valuen;
+  }
+}
+
 /* back to top */
 
 window.addEventListener("scroll", () => {
@@ -32,7 +49,13 @@ function preLoader() {
   let loadTl = gsap.timeline({
     defaults: { Easings: Expo.EaseOut },
   });
-  loadTl.to(".loader>img", { top: 5, left: 20, scale: 1, duration: 3, delay: 2 });
+  loadTl.to(".loader>img", {
+    top: 5,
+    left: 20,
+    scale: 1,
+    duration: 3,
+    delay: 2,
+  });
   loadTl.fromTo(".loader", { opacity: 1 }, { opacity: 0, duration: 5 }, "<");
   loadTl.to(".preloader", { zIndex: -2 });
 }
