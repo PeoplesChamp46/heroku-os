@@ -119,6 +119,11 @@ ul {
   transition: opacity 5s ease;
 }
 
+.brand-logo{
+  margin-left: -3em;
+  
+}
+
 nav {
   display: none;
 }
@@ -525,6 +530,11 @@ footer {
 
   .logo {
     transform: scale(0.9);
+  }
+
+  .brand-logo{
+    margin-left: 0;
+    
   }
 
   .back-to-top {
