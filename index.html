@@ -19,7 +19,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-
   </head>
   <body onload="preLoader()">
     <div class="back-to-top">
@@ -32,7 +31,7 @@
     </div>
     <!-- intro animation logo -->
 
-       <div class="preloader">
+    <div class="preloader">
       <div class="loader">
         <img src="./assets/Logo/oiaspl logo png 1.png" />
       </div>
@@ -96,13 +95,15 @@
           <li><a href="../index.html">Home</a></li>
           <li><a href="./pages/about.html">About Us</a></li>
           <li><a href="./pages/auto.html">Why Automation?</a></li>
-          <li><a href="./pages/projects.html">Projects</a><span onclick="expandMenu()">+</span></li>
+          <li>
+            <a href="./pages/projects.html">Projects</a
+            ><span onclick="expandMenu()">+</span>
+          </li>
           <ul id="inner-mob-list">
             <li><a href="./pages/project-amar.html">amar</a></li>
             <li><a href="./pages/project-parmar.html">parmar</a></li>
             <li><a href="./pages/project-gunjay.html">gunjay</a></li>
             <li><a href="./pages/project-rna.html">rna</a></li>
-           
           </ul>
           <li><a href="#">Solutions</a></li>
           <li><a href="#">Testimonial</a></li>
@@ -164,19 +165,13 @@
         <div class="carousel">
           <div class="slider">
             <div class="slide">
-              <img
-                src="https://source.unsplash.com/random"
-                alt=""
-              />
+              <img src="https://source.unsplash.com/random" alt="" />
             </div>
             <div class="slide">
               <img src="https://source.unsplash.com/random/?city" alt="" />
             </div>
             <div class="slide">
-              <img
-                src="https://source.unsplash.com/random/?night"
-                alt=""
-              />
+              <img src="https://source.unsplash.com/random/?night" alt="" />
             </div>
             <div class="slide">
               <img src="https://source.unsplash.com/random/?nature" alt="" />
@@ -267,8 +262,5 @@
     </div>
 
     <script src="./script.js"></script>
-
-    <script src="animation.js"></script>
-    
   </body>
 </html>

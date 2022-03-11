@@ -1,3 +1,16 @@
+/* header scroll background animation */
+
+const body = document.body;
+
+window.addEventListener("scroll", () => {
+  const scrollValue = window.pageYOffset;
+
+  const scrollPoint = scrollValue / 100;
+
+  document.querySelector("#index-head").style.backgroundColor =
+    "rgba(0, 0, 0," + scrollPoint + ")";
+});
+
 /* menu button  */
 
 function showmenu() {
@@ -43,7 +56,7 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
-/* into load animation */
+/* preload animation */
 
 function preLoader() {
   let loadTl = gsap.timeline({
@@ -56,7 +69,7 @@ function preLoader() {
     duration: 3,
     delay: 2,
   });
-  loadTl.fromTo(".loader", { opacity: 1 }, { opacity: 0, duration: 5 }, "<");
+  loadTl.fromTo(".loader", { opacity: 1 }, { opacity: 0, duration: 3 }, "<");
   loadTl.to(".preloader", { zIndex: -2 });
 }
 

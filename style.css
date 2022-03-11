@@ -37,7 +37,7 @@ background-size: 16px 48px; */
 
   /* display: none;  */ /* change intro logo*/
 
-  animation: intro 5s linear ease-in-out;
+  animation: intro 3s linear ease-in-out;
 }
 
 .loader > img {
