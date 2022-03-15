@@ -30,10 +30,13 @@ function expandMenu() {
   if (content.style.height) {
     content.style.height = null;
     content.style.opacity = 0;
+    content.style.display = "none";
     document.querySelector("span").innerHTML = valuep;
   } else {
     content.style.height = "100%";
     content.style.opacity = 1;
+    content.style.display = "block";
+
     document.querySelector("span").innerHTML = valuen;
   }
 }
@@ -107,12 +110,16 @@ function slides() {
 }
 
 next.addEventListener("click", () => {
-  reset();
   textOutro();
-  slideIndex = slideIndex < sIndex ? slideIndex + 1 : 0;
-  slider.children[slideIndex].style.zIndex = 0;
-  slider.children[slideIndex].style.opacity = 1;
-  slider.children[slideIndex].style.transform = "scale(1.1)";
+  setTimeout(() => {
+    reset();
+
+    slideIndex = slideIndex < sIndex ? slideIndex + 1 : 0;
+    slider.children[slideIndex].style.zIndex = 0;
+    slider.children[slideIndex].style.opacity = 1;
+    slider.children[slideIndex].style.transform = "scale(1.1)";
+  }, 1000);
+
   setTimeout(textIntro, 1000);
 });
 
