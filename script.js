@@ -94,33 +94,48 @@ function reset() {
   }
 }
 
-slides();
-textIntro();
-
-function slides() {
-  reset();
-  textIntro();
-  slideIndex = slideIndex < sIndex ? slideIndex + 1 : 0;
+function slideMech() {
   slider.children[slideIndex].style.zIndex = 0;
   slider.children[slideIndex].style.opacity = 1;
   slider.children[slideIndex].style.transform = "scale(1.1)";
-
-  setTimeout(textOutro, 9000);
-  setTimeout(slides, 10000);
 }
 
-next.addEventListener("click", () => {
+textIntro();
+
+
+
+let timer = 10000;
+
+let slideSet = setInterval(() => {
+  nextSlide();
+}, timer);
+
+/* function slides() {
+  reset();
+  textIntro();
+
+  slideIndex = slideIndex < sIndex ? slideIndex + 1 : 0;
+  slideMech();
+
+  setTimeout(textOutro, 9000);
+} */
+
+function nextSlide() {
   textOutro();
+  loadingBar();
+
   setTimeout(() => {
     reset();
 
     slideIndex = slideIndex < sIndex ? slideIndex + 1 : 0;
-    slider.children[slideIndex].style.zIndex = 0;
-    slider.children[slideIndex].style.opacity = 1;
-    slider.children[slideIndex].style.transform = "scale(1.1)";
+    slideMech();
   }, 1000);
 
   setTimeout(textIntro, 1000);
+}
+
+next.addEventListener("click", () => {
+  nextSlide();
 });
 
 prev.addEventListener("click", () => {
@@ -128,9 +143,8 @@ prev.addEventListener("click", () => {
   textOutro();
 
   slideIndex = slideIndex > 0 ? slideIndex - 1 : sIndex;
-  slider.children[slideIndex].style.zIndex = 0;
-  slider.children[slideIndex].style.opacity = 1;
-  slider.children[slideIndex].style.transform = "scale(1.1)";
+  slideMech();
+
   setTimeout(textIntro, 1000);
 });
 
@@ -146,4 +160,8 @@ function textOutro() {
 
   tl.fromTo(".heading", { opacity: 1, y: 0 }, { opacity: 0, y: -50 });
   tl.fromTo(".hero-button", { opacity: 1, y: 0 }, { opacity: 0, y: 50 }, "=");
+}
+
+function loadingBar() {
+  gsap.fromTo(".loadbar-in", { width: "0%" }, { width: "100%", duration: 10 });
 }
