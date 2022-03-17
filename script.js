@@ -102,8 +102,6 @@ function slideMech() {
 
 textIntro();
 
-
-
 let timer = 10000;
 
 let slideSet = setInterval(() => {

@@ -166,6 +166,7 @@ nav {
   opacity: 0;
   background-color: #222;
   text-transform: capitalize;
+  display: none;
 }
 
 #inner-mob-list > li > a {
